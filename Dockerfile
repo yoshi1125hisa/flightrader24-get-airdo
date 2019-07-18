@@ -8,13 +8,13 @@ WORKDIR ${project_dir}
 
 RUN set -x && \
     apk upgrade --no-cache && \
-    apk --update add --no-cache musl \
-            linux-headers \
-            gcc \
-            g++ \
-            make \
-            gfortran \
-            openblas-dev && \
+    # apk --update add --no-cache musl \
+    #         linux-headers \
+    #         gcc \
+    #         g++ \
+    #         make \
+    #         gfortran \
+    #         openblas-dev && \
     pip3 install --upgrade pip && \
     pip3 install -r requirements.txt
 
